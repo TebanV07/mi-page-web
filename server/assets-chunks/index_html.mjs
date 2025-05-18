@@ -1,7 +1,7 @@
 export default `<!DOCTYPE html><html lang="es" data-beasties-container><head><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta charset="utf-8">
   <title>Mi Página Personal</title>
-  <base href="https://TebanV07.github.io/mi-page-web/">
+  <base href="https://tebanv07.github.io/mi-page-web/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Página web personal de [Tu Nombre] - Desarrollador Web">
   <link rel="icon" type="image/x-icon" href="favicon.ico">

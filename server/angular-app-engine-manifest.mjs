@@ -1,6 +1,6 @@
 
 export default {
-  basePath: 'https://TebanV07.github.io/mi-page-web',
+  basePath: 'https://tebanv07.github.io/mi-page-web',
   supportedLocales: {
   "en-US": ""
 },
