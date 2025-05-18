@@ -1,0 +1,91 @@
+<section id="contacto" class="contact-section">
+  <div class="container">
+    <h2>Contáctame</h2>
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <p>{{ email }}</p>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-phone"></i>
+          <p>{{ phone }}</p>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>{{ location }}</p>
+        </div>
+        <div class="social-links">
+          <a href="{{ githubUrl }}" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+      <div class="contact-form">
+        <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              [(ngModel)]="formData.name" 
+              required 
+              #name="ngModel"
+            >
+            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error-message">
+              Nombre es requerido
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              [(ngModel)]="formData.email" 
+              required 
+              email
+              #emailInput="ngModel"
+            >
+            <div *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)" class="error-message">
+              Email válido es requerido
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Asunto</label>
+            <input 
+              type="text" 
+              id="subject" 
+              name="subject" 
+              [(ngModel)]="formData.subject" 
+              required
+              #subject="ngModel"
+            >
+            <div *ngIf="subject.invalid && (subject.dirty || subject.touched)" class="error-message">
+              Asunto es requerido
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows="5" 
+              [(ngModel)]="formData.message" 
+              required
+              #message="ngModel"
+            ></textarea>
+            <div *ngIf="message.invalid && (message.dirty || message.touched)" class="error-message">
+              Mensaje es requerido
+            </div>
+          </div>
+          <button type="submit" [disabled]="contactForm.invalid" class="submit-btn">Enviar Mensaje</button>
+        </form>
+        <div *ngIf="formSubmitted" class="success-message">
+          ¡Gracias por tu mensaje! Te responderé lo antes posible.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,10 @@
+.app-container {
+  font-family: 'Roboto', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+main {
+  margin: 2rem 0;
+}
